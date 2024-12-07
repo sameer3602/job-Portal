@@ -1,12 +1,14 @@
 Job Portal Website
-Welcome to the Job Portal Website, a comprehensive platform designed for job seekers and employers to connect. The platform streamlines the job application process, enables job posting, and facilitates seamless interactions between candidates and recruiters.
+Welcome to the Job Portal Website, a comprehensive platform designed for job seekers and employers to connect.
+The platform streamlines the job application process, enables job posting, and facilitates seamless interactions between candidates and recruiters.
 
 Features
-For Job Seekers
+<b>For Job Seekers</b>
 Profile Creation: Build a professional profile with skills, experience, and educational background.
 Job Search: Search for jobs based on keywords, location, and industry.
 Application Management: Apply for jobs and track the application status.
 Notifications: Get alerts for new job opportunities matching your profile.
+
 For Employers
 Job Posting: Post jobs with detailed descriptions and requirements.
 Candidate Search: Browse candidate profiles to find potential employees.
