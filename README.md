@@ -17,7 +17,7 @@ Company Dashboard: Analyze job postings and candidate responses.
 
 Tech Stack
 Frontend
-Framework: React / Angular (choose based on project specifics)
+Framework: React 
 Styling: Tailwind CSS / Bootstrap
 State Management: Redux / Context API
 
