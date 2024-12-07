@@ -14,11 +14,13 @@ Job Posting: Post jobs with detailed descriptions and requirements.
 Candidate Search: Browse candidate profiles to find potential employees.
 Application Tracking: Manage applications and communicate with applicants directly.
 Company Dashboard: Analyze job postings and candidate responses.
+
 Tech Stack
 Frontend
 Framework: React / Angular (choose based on project specifics)
 Styling: Tailwind CSS / Bootstrap
 State Management: Redux / Context API
+
 Backend
 Framework: Node.js with Express.js
 Database: MongoDB / MySQL
@@ -27,7 +29,7 @@ File Uploads: AWS S3 / Cloudinary
 DevOps (Optional)
 CI/CD: GitHub Actions / Jenkins
 Hosting: AWS EC2 / Vercel
-Containerization: Docker
+
 Installation
 Clone the repository:
 
