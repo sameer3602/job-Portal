@@ -14,10 +14,12 @@ export const register = async (req, res) => {
                 success: false
             });
         };
-        const file = req.file;
-        const fileUri = getDataUri(file);
+        // console.log(fullname,email,password,role);
+        const files = req.file;
+        // console.log(files);
+        const fileUri = getDataUri(files);
         const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
-
+        // console.log(fileUri,cloudResponse);
         const user = await User.findOne({ email });
         if (user) {
             return res.status(400).json({
