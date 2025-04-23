@@ -53,6 +53,8 @@ Copy code
 DATABASE_URL=<your-database-url>  
 JWT_SECRET=<your-jwt-secret>  
 CLOUDINARY_API_KEY=<optional for image uploads>  
+Cloudinary API secret=""
+CLoudinary cloud name="
 Run the application:
 
 bash
