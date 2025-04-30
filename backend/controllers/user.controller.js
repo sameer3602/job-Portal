@@ -14,10 +14,12 @@ export const register = async (req, res) => {
                 success: false
             });
         };
-        const file = req.file;
-        const fileUri = getDataUri(file);
+        // console.log(fullname,email,password,role);
+        const files = req.file;
+        // console.log(files);
+        const fileUri = getDataUri(files);
         const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
-
+        // console.log(fileUri,cloudResponse);
         const user = await User.findOne({ email });
         if (user) {
             return res.status(400).json({
@@ -114,14 +116,6 @@ export const logout = async (req, res) => {
 export const updateProfile = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, bio, skills } = req.body;
-        
-        const file = req.file;
-        // cloudinary ayega idhar
-        const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
-
-
-
         let skillsArray;
         if(skills){
             skillsArray = skills.split(",");
@@ -141,12 +135,21 @@ export const updateProfile = async (req, res) => {
         if(phoneNumber)  user.phoneNumber = phoneNumber
         if(bio) user.profile.bio = bio
         if(skills) user.profile.skills = skillsArray
-      
-        // resume comes later here...
-        if(cloudResponse){
+
+        
+        if (req.file){
+            const file = req.file;
+            // cloudinary ayega idhar
+            const fileUri = getDataUri(file);
+            const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
             user.profile.resume = cloudResponse.secure_url // save the cloudinary url
             user.profile.resumeOriginalName = file.originalname // Save the original file name
         }
+        // resume comes later here...
+        // if(cloudResponse){
+        //     user.profile.resume = cloudResponse.secure_url // save the cloudinary url
+        //     user.profile.resumeOriginalName = file.originalname // Save the original file name
+        // }
 
 
         await user.save();
